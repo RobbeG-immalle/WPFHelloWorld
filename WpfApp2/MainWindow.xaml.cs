@@ -20,9 +20,20 @@ namespace WpfApp2
     /// </summary>
     public partial class MainWindow : Window
     {
+        int Clickcount;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            MijnLabel.Content = ("De wereldbol is een ruimteschip");
+            MijnStatusLabel.Background = Brushes.Red;
+            MijnKnop.Content = ("Klik hier!" + Clickcount );
+
+
         }
     }
 }
